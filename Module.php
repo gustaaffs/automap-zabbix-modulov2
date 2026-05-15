@@ -3,11 +3,16 @@
 namespace Modules\AutomapTopology;
 
 use Zabbix\Core\CModule;
+use CMenuItem;
 
 class Module extends CModule {
 
 	public function init(): void {
-		// Item de menu adicionado via Administration → General → Modules
-		// após habilitar o módulo no Zabbix.
+		APP::Component()->getMenu()
+			->findOrAdd(_('Monitoring'))
+			->add(
+				(new CMenuItem(_('AutoMap')))
+					->setAction('automap.topology.view')
+			);
 	}
 }
