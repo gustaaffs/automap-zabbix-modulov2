@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2.0,
+  "id": "automap_topology",
+  "type": "module",
+  "name": "AutoMap Topology",
+  "namespace": "AutomapTopology",
+  "version": "1.0",
+  "author": "Gustavo Farias",
+  "description": "Mapa de topologia de rede via CDP/LLDP.",
+  "actions": {
+    "automap.topology.view": {
+      "class": "TopologyView"
+    }
+  },
+  "assets": {
+    "js": [
+      "topology.js"
+    ],
+    "css": []
+  }
+}
