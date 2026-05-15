@@ -20,7 +20,7 @@ class TopologyView extends CController {
 	}
 
 	protected function checkPermissions(): bool {
-		return $this->getUserType() >= USER_TYPE_ZABBIX_USER;
+		return true;
 	}
 
 	// ── Helpers BFS ────────────────────────────────────────────────────────
