@@ -9,7 +9,14 @@ use CControllerResponseData;
 class TopologyView extends CController {
 
 	protected function checkInput(): bool {
-		return true;
+		$fields = [
+			'groupids'      => 'array',
+			'max_levels'    => 'int32',
+			'util_warn_pct' => 'int32',
+			'util_crit_pct' => 'int32'
+		];
+
+		return $this->validateInput($fields);
 	}
 
 	protected function checkPermissions(): bool {
