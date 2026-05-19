@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "id": "topology",
+    "name": "Network Topology",
+    "namespace": "Topology",
+    "version": "1.0.0",
+    "author": "Gustavo Farias",
+    "url": "",
+    "description": "Topologia de rede com auto-descoberta via CDP/LLDP",
+    "type": "widget",
+    "widget": {
+        "id": "topology",
+        "name": "Network Topology",
+        "js_class": "WidgetTopology",
+        "use_time_selector": false,
+        "configuration_required": false
+    },
+    "actions": {
+        "topology.view": {
+            "class": "WidgetView",
+            "layout": "layout.widget"
+        },
+        "topology.save_link": {
+            "class": "TopologySaveLink",
+            "layout": "layout.widget"
+        },
+        "topology.remove_link": {
+            "class": "TopologyRemoveLink",
+            "layout": "layout.widget"
+        },
+        "topology.set_override": {
+            "class": "TopologySetOverride",
+            "layout": "layout.widget"
+        }
+    }
+}
